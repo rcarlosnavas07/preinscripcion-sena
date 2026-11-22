@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel del instructor – Preinscripción SENA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <p class="etiqueta">SENA · Panel del instructor</p>
+      <h1>Inscritos por programa</h1>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div id="aviso-config" class="aviso aviso-error" role="alert" hidden></div>
+
+    <!-- Inicio de sesión -->
+    <section id="vista-login" class="seccion" hidden>
+      <form id="form-login" class="tarjeta-form login" novalidate>
+        <h2>Ingresar</h2>
+        <div class="campo">
+          <label for="login-correo">Correo</label>
+          <input id="login-correo" type="email" autocomplete="username" inputmode="email">
+        </div>
+        <div class="campo">
+          <label for="login-clave">Contraseña</label>
+          <input id="login-clave" type="password" autocomplete="current-password">
+        </div>
+        <div id="login-error" class="aviso aviso-error" role="alert" hidden></div>
+        <button type="submit" id="login-enviar" class="boton">Entrar</button>
+      </form>
+    </section>
+
+    <!-- Panel -->
+    <section id="vista-panel" class="seccion" hidden>
+      <div class="panel-barra">
+        <button type="button" id="btn-actualizar" class="boton-secundario">Actualizar</button>
+        <button type="button" id="btn-csv" class="boton">Descargar lista (Excel / CSV)</button>
+        <span class="espacio"></span>
+        <button type="button" id="btn-salir" class="boton-secundario">Cerrar sesión</button>
+      </div>
+
+      <div id="resumen" class="resumen"></div>
+
+      <div class="campo filtro">
+        <label for="filtro">Ver programa</label>
+        <select id="filtro"><option value="">Todos los programas</option></select>
+      </div>
+
+      <div id="aviso-panel" class="aviso aviso-error" role="alert" hidden></div>
+
+      <div class="tabla-caja">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Nombre completo</th><th>Teléfono</th><th>Correo</th><th>Programa</th><th>Fecha y hora</th></tr>
+          </thead>
+          <tbody id="filas"></tbody>
+        </table>
+        <p id="vacio" class="vacio" hidden>Todavía no hay inscritos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">Esta página contiene datos personales. Cierra la sesión al terminar.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/programas.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
