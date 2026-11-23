@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
   <meta name="description" content="Elige tu programa de formación técnica del SENA según tus preferencias.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
   <header class="encabezado">
@@ -19,6 +21,8 @@
         elijas el programa de formación técnica que más se parezca a tus gustos y preferencias.
         Lee con calma cada programa y luego inscríbete.
       </p>
+
+      <img src="logo/logo_sena_blanco_transparente.png" alt="logo-sena" class="logo-sena">
     </div>
   </header>
 
@@ -28,7 +32,7 @@
 
     <!-- Tarjetas de programas con cupos -->
     <section aria-labelledby="titulo-programas" class="seccion">
-      <h2 id="titulo-programas">Programas y cupos disponibles</h2>
+      <h2 id="titulo-programas" class="txt-center">Programas y cupos disponibles</h2>
       <p class="nota">Los cupos se actualizan solos cada pocos segundos.</p>
       <div id="aviso-cupos" class="aviso aviso-alerta" role="status" hidden>
         No pudimos actualizar los cupos. Revisa tu conexión; seguimos intentando.
@@ -38,7 +42,7 @@
 
     <!-- Formulario -->
     <section id="inscripcion" aria-labelledby="titulo-form" class="seccion">
-      <h2 id="titulo-form">Inscríbete</h2>
+      <h2 id="titulo-form" class="txt-center">Inscríbete</h2>
 
       <div id="confirmacion" class="aviso aviso-ok" role="status" tabindex="-1" hidden></div>
 
@@ -48,22 +52,22 @@
         <div class="campo">
           <label for="nombre">Nombre completo</label>
           <input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="100"
-                 placeholder="Ejemplo: María Fernanda López" aria-describedby="error-nombre">
+            placeholder="Ejemplo: María Fernanda López" aria-describedby="error-nombre">
           <p class="error" id="error-nombre" aria-live="polite"></p>
         </div>
 
         <div class="campo">
           <label for="telefono">Número de celular</label>
-          <input id="telefono" name="telefono" type="text" inputmode="numeric" autocomplete="tel"
-                 maxlength="12" placeholder="3000000000" aria-describedby="ayuda-telefono error-telefono">
-          <p class="ayuda" id="ayuda-telefono">10 números, sin espacios. Ejemplo: 3000000000</p>
+          <input id="telefono" name="telefono" type="text" inputmode="numeric" autocomplete="tel" maxlength="12"
+            placeholder="3123456789" aria-describedby="ayuda-telefono error-telefono">
+          <p class="ayuda" id="ayuda-telefono">10 números, sin espacios. Ejemplo: 3123456789</p>
           <p class="error" id="error-telefono" aria-live="polite"></p>
         </div>
 
         <div class="campo">
           <label for="correo">Correo electrónico</label>
-          <input id="correo" name="correo" type="email" inputmode="email" autocomplete="email"
-                 maxlength="120" placeholder="nombre@correo.com" aria-describedby="error-correo">
+          <input id="correo" name="correo" type="email" inputmode="email" autocomplete="email" maxlength="120"
+            placeholder="nombre@correo.com" aria-describedby="error-correo">
           <p class="error" id="error-correo" aria-live="polite"></p>
         </div>
 
@@ -106,4 +110,5 @@
   <script src="js/validaciones.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
