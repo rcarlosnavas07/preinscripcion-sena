@@ -49,7 +49,7 @@ body {
   padding: 0 16px;
   position: relative;
 }
-.logo-sena {
+.contenedor .logo-sena {
   position: absolute;
   display: none;
 }
@@ -86,7 +86,7 @@ h2 {
 }
 
 .txt-center {
-  text-align: center;
+  text-align: center !important;
 }
 .seccion {
   margin: 28px 0;
@@ -340,7 +340,7 @@ select[aria-invalid="true"] {
   .encabezado {
     padding: 40px 0 44px;
   }
-  .logo-sena {
+  .contenedor .logo-sena {
     position: absolute;
     top: 0;
     right: 16px;
