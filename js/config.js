@@ -6,6 +6,6 @@
 //  en la base de datos. NUNCA pegues aquí la clave "service_role".
 // =====================================================================
 window.SENA_CONFIG = {
-  SUPABASE_URL: "https://wsgfrkkilwznayscofdd.supabase.co/rest/v1/",
+  SUPABASE_URL: "https://wsgfrkkilwznayscofdd.supabase.co/",
   SUPABASE_ANON_KEY: "sb_publishable_Zy92omRZnMC9OFFVvh2KOw_0B6CJUcg",
 };
